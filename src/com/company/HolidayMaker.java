@@ -112,11 +112,7 @@ public class HolidayMaker {
 
     public void findfreeRoomsBetweenDates(LocalDate desiredBookingStart, LocalDate desiredBookingEnd){
         dBComms.getRoomsAvailableBetween(desiredBookingStart, desiredBookingEnd);
-        dBComms.printBookingsSetFromDb();
-    }
-
-    public void registrationProcess() {
-
+        dBComms.printAvailableRoomsSetFromDb();
     }
 }
 

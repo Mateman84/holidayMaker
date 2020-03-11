@@ -57,6 +57,7 @@ public class Communicator {
             resultSet = statement.executeQuery();
         } catch (Exception ex) { ex.printStackTrace(); }
     }
+
     void getBookingsFromDb(){
         try{
             statement = conn.prepareStatement("SELECT * FROM bookings");
@@ -77,7 +78,6 @@ public class Communicator {
         } catch (Exception ex) { ex.printStackTrace(); }
     }
 
-
     void printRoomResultSetFromDb(){
         try {
             while (resultSet.next()) {
@@ -92,7 +92,7 @@ public class Communicator {
         } catch (Exception ex){ ex.printStackTrace(); }
     }
 
-    void printBookingsSetFromDb(){
+    void printAvailableRoomsSetFromDb(){
         try {
             while (resultSet.next()) {
                 int id = resultSet.getInt("id");
@@ -115,5 +115,9 @@ public class Communicator {
                 System.out.println(id + " " + name + " " + numPeople + " " + email);
             }
         } catch (Exception ex){ ex.printStackTrace(); }
+    }
+
+    void  getRoomsWithCriterias (){
+        
     }
 }
